@@ -1,38 +1,62 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@100&family=Noto+Sans:ital,wght@1,100;1,200&family=Poppins:wght@400;700&family=Roboto:wght@400;700&family=Spectral:ital@1&display=swap');
+*{
+  font-family: 'Noto Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+.block{
+  border: 1px solid rgb(156, 156, 156);
+  width: 580px;
+  margin-inline: auto;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  box-shadow: 0 0 25px rgb(52, 52, 52);
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+  padding-block: 40px;
+  padding-inline: 20px;
+  background-color: white;
+}
+.btn{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(55, 55, 234);
   color: white;
+  width: 150px;
+  margin-inline: auto;
+}
+.author{
+  font-style: italic;
+}
+.background{
+  height: 100%;
+  padding-top: 200px;
+  padding-bottom: 450px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@keyframes spinner {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
+}
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3; /* Light grey */
+  border-top: 10px solid #383636; /* Blue */
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
+
+.spinner-container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
 }
